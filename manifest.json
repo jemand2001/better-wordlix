@@ -1,0 +1,21 @@
+{
+    "name": "better Wordlix",
+    "description": "dark result copying, ...",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "js": ["main.js"],
+            "matches": [
+                "https://wordlix.app/*"
+            ],
+            "all_frames": true,
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": ["emojiSetter.js"],
+        "matches": ["https://wordlix.app/*"]
+    }],
+    "incognito": "split"
+}
